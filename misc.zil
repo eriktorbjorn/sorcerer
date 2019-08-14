@@ -543,7 +543,7 @@ Everything is hazy, as though viewed through a gauze...">
 	 <PUT <SET CINT <INT .RTN>> ,C-TICK .TICK>
 	 .CINT>
 
-<ROUTINE INT (RTN "OPTIONAL" (DEMON <>) E C INT)
+<ROUTINE INT (RTN "OPTIONAL" (DEMON <>) "AUX" E C INT)
 	 <SET E <REST ,C-TABLE ,C-TABLELEN>>
 	 <SET C <REST ,C-TABLE ,C-INTS>>
 	 <REPEAT ()
