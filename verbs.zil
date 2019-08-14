@@ -472,7 +472,7 @@ object, LOOK INSIDE it, LOOK UNDER it, etc." CR>>
 		<TELL "You are now on your feet." CR>
 		<MOVE ,PROTAGONIST ,HERE>)>>
 
-<ROUTINE V-DRINK ("AUX" S)
+<ROUTINE V-DRINK ()
 	 <TELL "You can't drink that!" CR>>
 
 <ROUTINE V-DRINK-FROM ("AUX" X)
@@ -951,7 +951,7 @@ before you leaped.">)
 	 <COND (,FWEEPED
 		<BATTY>)>>
 
-<ROUTINE V-OPEN ("AUX" F STR)
+<ROUTINE V-OPEN ()
 	 <COND (<FSET? ,PRSO ,SCROLLBIT>
 		<TELL-ME-HOW>) 
 	       (<EQUAL? ,PRSO ,ACTORBIT>
@@ -2074,7 +2074,7 @@ on which it is written." CR>
 	  YONK-SPELL
 	  MALYON-SPELL>>
 
-<ROUTINE V-SPELLS ("AUX" (CNT <GET ,ALL-SPELLS 0>) S (ANY <>) (OS <>) TMP)
+<ROUTINE V-SPELLS ("AUX" (CNT <GET ,ALL-SPELLS 0>) (ANY <>) (OS <>) TMP)
 	 <TELL
 "The gnusto, rezrov, and frotz spells are yours forever. Other than that,
 you have ">
@@ -2472,7 +2472,7 @@ has a word written on it."
 
 <GLOBAL FUMBLE-NUMBER 7>
 
-<ROUTINE ITAKE ("OPTIONAL" (VB T) "AUX" CNT OBJ)
+<ROUTINE ITAKE ("OPTIONAL" (VB T) "AUX" CNT)
 	 <COND (,FWEEPED
 		<COND (.VB
 		       <BATTY>)>
@@ -3068,7 +3068,7 @@ drop dead again." CR>
 				    <EQUAL? <GETB .TEE ,DEXITOBJ> .DOBJ>>
 			       <RETURN .P>)>)>>>
 
-<ROUTINE NOTHING-HELD? ("AUX" X N) ;"is player empty-handed?"
+<ROUTINE NOTHING-HELD? ("AUX" X) ;"is player empty-handed?"
 	 <SET X <FIRST? ,PROTAGONIST>>
 	 <REPEAT ()
 		 <COND (.X

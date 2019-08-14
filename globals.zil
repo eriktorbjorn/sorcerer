@@ -129,7 +129,7 @@
 	 <SETG QUOTE-FLAG <>>
 	 <RTRUE>>
 
-<ROUTINE FIND-NOT-HERE (TBL PRSO? "AUX" M-F OBJ)
+<ROUTINE FIND-NOT-HERE (TBL PRSO? "AUX" M-F)
 	;"Here is where special-case code goes. <MOBY-FIND .TBL> returns
 	   number of matches. If 1, then P-MOBY-FOUND is it. One may treat
 	   the 0 and >1 cases alike or different. It doesn't matter. Always
@@ -576,7 +576,7 @@ who proceeds to take out its anger on you.">)>)
 	(SYNONYM SKY STARS)
 	(ACTION SKY-F)>
 
-<ROUTINE SKY-F ("AUX" EL)
+<ROUTINE SKY-F ()
 	 <COND (<VERB? EXAMINE>
 		<COND (<FSET? ,HERE ,INSIDEBIT>
 		       <TELL "That would be difficult from here." CR>)
